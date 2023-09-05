@@ -3,6 +3,7 @@ Script and java program complex, which makes you to send files from your PC (Ter
 Telegram Bot will send you files you sent before from terminal to keep them on Telegram Servers (50 MiB file limit TelegramAPI).
 
 [![N|Solid](https://github.com/0xDABE/tgbotsend/blob/master/Screenshot_1.png?raw=true)](https://github.com/0xDABE/tgbotsend/blob/master/Screenshot_1.png?raw=true)
+[![N|Solid](https://github.com/0xDABE/tgbotsend/blob/master/Screenshot_2.png?raw=true)](https://github.com/0xDABE/tgbotsend/blob/master/Screenshot_2.png?raw=true)
 # Requirements:
  - [JDK 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) or above
  - Telegram Bot data: Bot's `token`, bot's `username` and your `ChatID`.
