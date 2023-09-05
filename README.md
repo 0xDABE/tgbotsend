@@ -58,4 +58,3 @@ in your terminal. If you see a help page you are done. Now you should to fill th
 ```cmd
 snd dir1 dir2 file1.txt file2.mp3 file3
 ```
-- Converting .bat to .exe file is recomended.
