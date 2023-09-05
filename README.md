@@ -1,6 +1,6 @@
 # tgbotsend
 Script and java program complex, which makes you to send files from your PC (Termux too) to Telegram.
-Telegram Bot will send you files you sent before from terminal to keep them on Telegram Servers.
+Telegram Bot will send you files you sent before from terminal to keep them on Telegram Servers (50 MiB file limit TelegramAPI).
 # Requirements:
  - [JDK 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) or above
  - Telegram Bot data: Bot's `token`, bot's `username` and your `ChatID`.
