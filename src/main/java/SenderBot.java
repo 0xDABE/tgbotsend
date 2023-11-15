@@ -19,15 +19,15 @@ public class SenderBot extends TelegramLongPollingBot {
         File file = new File(FilePath);
         String size = classifyFileSize(file);
         if (Objects.equals(size, "0 bytes")){
-            ColoredMessage.blue(FilePath + "(" + size + "): ");
-            ColoredMessage.red(" ERROR (Empty file)\n");
+            ColoredMessage.blue(FilePath + "(" + size + "): ", CfgLoader.CompatibilityModeOff);
+            ColoredMessage.red(" ERROR (Empty file)\n", CfgLoader.CompatibilityModeOff);
             Main.errors += 1;
             return;
         }
 
         if (Objects.equals(size.substring(0, 5), "Error")){
-            ColoredMessage.blue(FilePath + "(" + size.substring(5) + "): ");
-            ColoredMessage.red("  ERROR (over 50 mib)\n");
+            ColoredMessage.blue(FilePath + "(" + size.substring(5) + "): ", CfgLoader.CompatibilityModeOff);
+            ColoredMessage.red("  ERROR (over 50 mib)\n", CfgLoader.CompatibilityModeOff);
             Main.errors += 1;
             return;
         }
@@ -40,19 +40,19 @@ public class SenderBot extends TelegramLongPollingBot {
         for (int i = 1; i < Attempts + 1; i++) {
             long start = System.currentTimeMillis();
             try {
-                if (i == 1)ColoredMessage.blue(FilePath + "(" + size + "): ");
+                if (i == 1)ColoredMessage.blue(FilePath + "(" + size + "): ", CfgLoader.CompatibilityModeOff);
                 execute(sd);
                 long finish = System.currentTimeMillis();
                 Main.total += (finish - start);
-                ColoredMessage.blue(getTime(finish - start));
-                ColoredMessage.green("  OK\n");
+                ColoredMessage.blue(getTime(finish - start), CfgLoader.CompatibilityModeOff);
+                ColoredMessage.green("  OK\n", CfgLoader.CompatibilityModeOff);
                 return;
             } catch (TelegramApiException e) {
-                if (i == 1) ColoredMessage.yellow("   Try: ");
-                ColoredMessage.yellow(i + "  ");
+                if (i == 1) ColoredMessage.yellow("   Try: ", CfgLoader.CompatibilityModeOff);
+                ColoredMessage.yellow(i + "  ", CfgLoader.CompatibilityModeOff);
             }
         }
-        ColoredMessage.red("  ERROR\n");
+        ColoredMessage.red("  ERROR\n", CfgLoader.CompatibilityModeOff);
         Main.errors += 1;
     }
     public SenderBot(String path){

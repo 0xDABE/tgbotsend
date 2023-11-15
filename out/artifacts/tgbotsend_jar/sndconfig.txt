@@ -1,6 +1,7 @@
 Token=""    	// Bot's token. You can get it only from BotFather
 BotName=""          				// Bot's username
 ChatID=""    			 			// Your chat ID, bot will send files to ChatID
+ColoredOutput="True"
 Attempts="3"							// Number of attempts on errors (optional, default=3)
 Limit="50"             			 			// Limit in MB (optional, default=50)
 								// 	Telegram's API limit is 50 MiB (not MB)

@@ -18,8 +18,8 @@ public class Main {
         if (args.length > 0){
             CfgLoader.load(jarPath + File.separator + "sndconfig.txt");
             for (String arg : args) recDir.exec(new File(arg));
-            if (errors == 0) ColoredMessage.green("Done " + SenderBot.getTime(Main.total));
-            else ColoredMessage.yellow("Done " + SenderBot.getTime(Main.total) + "\nErrors: " + errors);
+            if (errors == 0) ColoredMessage.green("Done " + SenderBot.getTime(Main.total), CfgLoader.CompatibilityModeOff);
+            else ColoredMessage.yellow("Done " + SenderBot.getTime(Main.total) + "\nErrors: " + errors, CfgLoader.CompatibilityModeOff);
         }
         else {
             System.out.print("""
